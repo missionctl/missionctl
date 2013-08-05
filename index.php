@@ -31,12 +31,6 @@
 
     // Handle request
     $page = APPROOT . '/app/models/' . $model . '/' . $action . '.php';
-
-    if(file_exists($page)) {
-        require_once($page);
-    } else {
-        die('Required page not found: ' . $page);
-    }
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +38,8 @@
 <html lang="en">
     <head>
         <!-- Metadata -->
-        <meta charset="UTF-8">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
 
         <!-- Styles -->
@@ -56,7 +51,29 @@
         <script src="lib/vendors/jquery/jquery.min.js"></script>
         <script src="lib/vendors/bootstrap/js/bootstrap.min.js"></script>
     </head>
-    <body>
-        
+    <body class="container">
+        <header>
+            <h1>MissionCTL <small>Control your ROS robots via the web</small></h1>
+            <nav class="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="row">
+            <?php 
+                if(file_exists($page)) {
+                    require_once($page);
+                } else {
+                    // TODO: Make this pretty
+                    die('Required page not found: ' . $page);
+                }
+            ?>
+        </section>
+        <footer>
+            <p>Copyright &copy; 2013 MissionCTL Project - <a href="#">missionctl.net</a></p>
+        </footer>
     </body>
 </html>
