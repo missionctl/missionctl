@@ -38,3 +38,25 @@
         die('Required page not found: ' . $page);
     }
 ?>
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!-- Metadata -->
+        <meta charset="UTF-8">
+        <title>Document</title>
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="lib/vendors/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="lib/vendors/font-awesome/css/font-awesome.css" />
+        <link rel="stylesheet" href="web/styles/master.css" />
+
+        <!-- Scripts -->
+        <script src="lib/vendors/jquery/jquery.min.js"></script>
+        <script src="lib/vendors/bootstrap/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        
+    </body>
+</html>
