@@ -51,18 +51,36 @@
         <script src="lib/vendors/jquery/jquery.min.js"></script>
         <script src="lib/vendors/bootstrap/js/bootstrap.min.js"></script>
     </head>
-    <body class="container">
-        <header>
-            <h1>MissionCTL <small>Control your ROS robots via the web</small></h1>
-            <nav class="navbar">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                </ul>
-            </nav>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <button type="button" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="nav-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Robot <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Manage...</a></li>
+                            </ul>
+                        <li><a href="#">Status</a></li>
+                        <li><a href="#">Control</a></li>
+                        <li><a href="#">Params</a></li>
+                        <li><a href="#">Topics</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header class="container">
+            <h1>MissionCTL <small>Control your ROS robot via the web</small></h1>
         </header>
-        <section class="row">
+        <section class="container">
             <?php 
                 if(file_exists($page)) {
                     require_once($page);
@@ -70,10 +88,7 @@
                     // TODO: Make this pretty
                     die('Required page not found: ' . $page);
                 }
-            ?>
+            ?>     
         </section>
-        <footer>
-            <p>Copyright &copy; 2013 MissionCTL Project - <a href="#">missionctl.net</a></p>
-        </footer>
     </body>
 </html>
