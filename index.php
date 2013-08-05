@@ -53,34 +53,12 @@
     </head>
     <body>
         <!-- Navbar -->
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <button type="button" class="navbar-toggle">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <div class="nav-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle">Robot <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Manage...</a></li>
-                            </ul>
-                        <li><a href="#">Status</a></li>
-                        <li><a href="#">Control</a></li>
-                        <li><a href="#">Params</a></li>
-                        <li><a href="#">Topics</a></li>
-                        <li><a href="#">Logout</a></li>
-                    </ul>
-                </div>
-            </div>
+        <nav class="container row">
+            
         </nav>
-        <header class="container">
-            <h1>MissionCTL <small>Control your ROS robot via the web</small></h1>
-        </header>
-        <section class="container">
+
+        <!-- Body -->
+        <section class="container row">
             <?php 
                 if(file_exists($page)) {
                     require_once($page);
@@ -90,5 +68,10 @@
                 }
             ?>     
         </section>
+
+        <!-- Footer -->
+        <footer class="container row">
+            
+        </footer>
     </body>
 </html>
