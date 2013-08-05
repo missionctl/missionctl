@@ -53,25 +53,35 @@
     </head>
     <body>
         <!-- Navbar -->
-        <nav class="container row">
-            
+        <nav class="container">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </div>
         </nav>
 
         <!-- Body -->
-        <section class="container row">
-            <?php 
-                if(file_exists($page)) {
-                    require_once($page);
-                } else {
-                    // TODO: Make this pretty
-                    die('Required page not found: ' . $page);
-                }
-            ?>     
+        <section class="container">
+            <div class="row">
+                <?php 
+                    if(file_exists($page)) {
+                        require_once($page);
+                    } else {
+                        // TODO: Make this pretty
+                        die('Required page not found: ' . $page);
+                    }
+                ?>
+            </div>
         </section>
 
         <!-- Footer -->
-        <footer class="container row">
-            
+        <footer class="container">
+            <div class="navbar navbar-fixed-bottom">
+                <p class="navbar-text">Copyright &copy; 2013 MissionCTL Project</p>
+            </div>  
         </footer>
     </body>
 </html>
